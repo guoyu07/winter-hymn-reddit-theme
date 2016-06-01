@@ -1,0 +1,485 @@
+// Variables
+
+$black: #222324
+$text: #69707a
+$light: #aeb1b5
+$background: #ebeff5
+
+$blue: #147efb
+$cyan: #5fc9f8
+$green: #53d769
+$red: #fc3158
+$yellow: #fecb2e
+
+$visited: #8e8e93
+
+$family: "Source Sans Pro", "Helvetica", sans-serif
+$shadow: 0 2px 5px rgba(black, 0.1)
+
+// Base
+
+html,
+body
+  background: #fafafa
+  color: $text
+  font-family: $family
+  font-size: 12px
+  text-rendering: optimizeLegibility
+
+a
+  color: $blue
+
+dt,
+strong
+  color: $black
+
+// Reset
+
+#sr-header-area,
+#header
+  background: none
+  border-bottom: none
+  text-transform: none
+
+.spacer
+  margin: 0 !important
+
+.content,
+.title
+  margin: 0
+
+// Header
+
+#sr-header-area
+  color: $light
+  a
+    color: $text
+  .selected a
+    color: $blue
+  .drop-choices a.choice:hover
+    background: $blue
+    color: white
+
+#header
+  background-color: $text
+  background-image: url(%%winter-hymn-header%%), linear-gradient(#b9ccd8, #e6eef1)
+  background-position: center bottom
+  background-repeat: no-repeat
+  background-size: cover
+
+#header-bottom-left
+  padding: 50px 0 0 20px
+
+#header-img.default-header
+  float: left
+  margin: 0 20px 0 0
+  width: 32px
+
+.pagename
+  display: inline-block
+  font-size: 32px
+  font-weight: normal
+  font-variant: normal
+  line-height: 40px
+  margin: 0
+  padding-top: 6px
+  vertical-align: top
+  &:before
+    color: $light
+    content: "/r/"
+
+.tabmenu
+  background: rgba(black, 0.7)
+  display: block
+  margin-left: -20px
+  margin-top: 20px
+  padding: 5px
+  li
+    margin: 0 -2px 0 0
+    font-weight: normal
+    a
+      background: none
+      border-radius: 2px
+      color: white
+      display: inline-block
+      height: 30px
+      line-height: 30px
+      padding: 0 15px
+      vertical-align: top
+      &:hover
+        background: rgba(white, 0.1)
+    &.selected
+      a
+        background: $blue
+        border: none
+        color: white
+
+#header-bottom-right
+  background: none
+  bottom: 10px
+  line-height: 20px
+  padding: 0
+  right: 10px
+  a,
+  .user,
+  .separator
+    color: white
+
+// Elements
+
+.arrow
+  border-radius: 2px
+  height: 20px
+  margin: 0
+  padding-left: 10px
+  width: 20px
+  &:before
+    border: solid transparent
+    border-width: 6px 5px
+    content: ""
+    display: block
+    height: 0
+    width: 0
+  &.up,
+  &.upmod,
+  &.down
+    background: $background
+  &.up,
+  &.upmod
+    height: 19px
+    padding-top: 1px
+    &:before
+      border-bottom-color: $light
+    &:hover
+      background: $green
+      &:before
+        border-bottom-color: white
+  &.down
+    height: 13px
+    padding-top: 7px
+    &:before
+      border-top-color: $light
+    &:hover
+      background: $red
+      &:before
+        border-top-color: white
+
+.btn
+  appearance: none
+  background: $green
+  border: none
+  border-radius: 2px
+  color: white
+  padding: 5px 10px
+
+.domain
+  font-size: 10px
+  vertical-align: middle
+
+.expando-button
+  background: $background !important
+  border-radius: 2px
+  color: $text
+  cursor: pointer
+  height: 20px
+  line-height: 20px
+  margin: 0
+  margin-right: 5px
+  margin-top: 22px
+  padding: 0
+  position: relative
+  width: 30px
+  &:before,
+  &:after
+    background: $light
+    content: ""
+    display: block
+    position: absolute
+  &:before
+    height: 8px
+    left: 14px
+    top: 6px
+    width: 2px
+  &:after
+    height: 2px
+    left: 11px
+    top: 9px
+    width: 8px
+  &:hover
+    background: $blue !important
+    &:before,
+    &:after
+      background: white
+  & + .tagline
+    text-indent: -35px
+
+.stamp
+  border-color: $red
+  border-radius: 2px
+  line-height: 18px
+  vertical-align: top
+
+// Link
+
+body >.content .link .midcol
+  margin: 0
+  width: 30px !important
+
+.linklisting
+  background: white
+  box-shadow: $shadow
+  margin: 20px
+  margin-right: 340px
+
+.link
+  border-bottom: 1px solid $background
+  border-left: 5px solid $blue
+  margin: 0
+  padding: 20px
+  .rank
+    display: none
+  .score
+    font-size: 16px
+    font-weight: 600
+    height: 30px
+    line-height: 30px
+    &.likes
+      color: $black
+      font-weight: 600
+  .thumbnail
+    margin: 0 12px 0 20px
+    width: 70px
+  .entry
+    margin: 0
+    padding-left: 8px
+  .title
+    color: $black
+    font-size: 22px
+    font-weight: 600
+    margin: 0
+    &:visited
+      color: $visited
+    &:hover
+      color: $blue
+      text-decoration: none
+  .tagline
+    color: $light
+    margin-top: 4px
+    a
+      color: $light
+  .flat-list
+    line-height: 20px
+    margin-left: -8px
+    margin-top: 5px
+    padding: 0
+    li
+      line-height: 20px
+      padding: 0
+      vertical-align: top
+      & + li
+        padding: 0
+      a
+        border-radius: 2px
+        color: $light
+        display: inline-block
+        font-weight: normal
+        height: 20px
+        margin-right: -3px
+        padding: 0 8px
+        vertical-align: top
+        &:hover
+          background: $background
+          color: $text
+          text-decoration: none
+        &.comments
+          color: $blue
+          font-weight: 600
+      .stamp
+        margin-left: 8px
+  .usertext
+    .md
+      background: $background
+      border: none
+      border-radius: 2px
+
+// Side
+
+.side
+  background: none
+  margin: 0
+  padding: 20px
+  width: 300px
+  .spacer
+    margin-bottom: 20px !important
+
+#search
+  input[type=text]
+    background: rgba(black, 0.1)
+    border: none
+    border-radius: 290486px
+    color: $black
+    outline: none
+    padding: 10px 20px
+    &:focus
+      background: rgba(black, 0.05)
+  input[type=submit]
+    margin-left: -32px
+
+#searchexpando
+  background: $yellow
+  border: none
+  color: rgba(black, 0.5)
+  display: block
+  margin: 10px 0 20px
+  padding: 20px
+  padding-bottom: 10px
+  dt
+    color: rgba(black, 0.7)
+
+#moresearchinfo
+  border-top-color: white
+
+.linkinfo
+  background: $cyan
+  border: none
+  color: white
+  padding: 20px
+  text-align: center
+  .date
+    color: rgba(white, 0.5)
+    font-size: 12px
+    margin-bottom: 10px
+    time
+      color: white
+  .score
+    color: rgba(white, 0.5)
+    font-size: 10px
+    .number,
+    .word
+      color: white
+    .word
+      &:after
+        content: ""
+        display: block
+  .shortlink
+    font-size: 0
+    margin-top: 10px
+    input
+      background: rgba(black, 0.2)
+      border: none
+      border-radius: 2px
+      color: white
+      display: block
+      font-size: 12px
+      padding: 5px
+      width: 100%
+
+.login-form-side
+  background: white
+  border: none
+  box-shadow: $shadow
+  padding: 10px
+  input[type=text],
+  input[type=password]
+    background: rgba(black, 0.1)
+    border: none
+    border-radius: 2px
+    margin: 0
+    outline: none
+    padding: 10px
+    width: 49%
+    &:focus
+      background: rgba(black, 0.05)
+  input[type=password]
+    margin-left: 2%
+  #remember-me,
+  .submit
+    margin: 0
+    margin-top: 10px
+
+.morelink
+  background: none
+  border: none
+  height: auto
+  font-size: 16px
+  font-weight: 600
+  letter-spacing: 0
+  line-height: auto
+  margin: 0
+  padding: 0
+  text-align: center
+  a
+    background: $blue
+    border-radius: 290486px
+    color: white
+    display: block
+    height: 40px
+    line-height: 40px
+    &:hover
+      background: $text
+  .nub
+    display: none
+  &:hover
+    background: none
+
+.titlebox
+  h1
+    font-family: $family
+    font-size: 32px
+    font-weight: 400
+    margin-bottom: 10px
+  .fancy-toggle-button
+    margin: 0
+    a
+      background: $green
+      border: none
+      border-radius: 2px
+      color: white
+      font-size: 12px
+      height: 24px
+      line-height: 24px
+      padding: 0 8px
+      vertical-align: top
+      &.active
+        display: inline-block
+      &.remove
+        background: $red
+  .subscribers
+    display: inline-block
+    line-height: 24px
+    margin-left: 10px
+    vertical-align: top
+    .number
+      color: $black
+      font-size: 16px
+      font-weight: 600
+  .users-online
+    line-height: 16px
+    margin: 10px 0
+  .bottom
+    background: rgba(black, 0.05)
+    border-radius: 2px
+    border-top: none
+    color: $light
+    font-size: 12px
+    padding: 5px 8px
+
+.titlebox form.toggle,
+.leavemoderator
+  box-shadow: $shadow
+  color: inherit
+  font-size: 12px
+  padding: 10px
+
+.sidebox
+  .spacer
+    box-shadow: $shadow
+    margin-top: 20px !important
+
+.sidecontentbox
+  .content
+    background: white
+    border: none
+    box-shadow: $shadow
+    font-size: 16px
+    padding: 10px
